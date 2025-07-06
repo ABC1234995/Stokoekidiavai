@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfroMart - East African E-Commerce</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #16a085;
+      }
+
+      h2 {
+        color: #16a085;
+        margin-top: 40px;
+        font-size: 1.8em;
+      }
+
+      .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .product-table th {
+        background-color: #16a085;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      .product-table td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        vertical-align: middle;
+      }
+
+      .product-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .product-table tr:hover {
+        background-color: #f1f1f1;
+        transition: background-color 0.3s;
+      }
+
+      .product-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-id {
+        color: #2c3e50;
+        font-weight: bold;
+      }
+
+      .price {
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      .registration-form {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 8px;
+        margin-top: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border 0.3s;
+      }
+
+      .form-control:focus {
+        border-color: #16a085;
+        outline: none;
+        box-shadow: 0 0 5px rgba(22, 160, 133, 0.3);
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .radio-option,
+      .checkbox-option {
+        display: flex;
+        align-items: center;
+      }
+
+      .radio-option input,
+      .checkbox-option input {
+        margin-right: 8px;
+      }
+
+      .btn-submit {
+        background-color: #16a085;
+        color: white;
+        border: none;
+        padding: 14px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-submit:hover {
+        background-color: #1abc9c;
+      }
+
+      select.form-control {
+        height: 45px;
+      }
+
+      @media (max-width: 768px) {
+        .product-table {
+          font-size: 14px;
+        }
+
+        .product-img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .product-table th,
+        .product-table td {
+          padding: 8px;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .registration-form {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>AfroMart East African Marketplace</h1>
+
+      <h2>Featured Products</h2>
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Product Image</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Coffee"
+                alt="Coffee"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF001</td>
+            <td>Premium Ethiopian Coffee Beans</td>
+            <td class="price">$14.99</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Tea"
+                alt="Tea"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF002</td>
+            <td>Kenyan Black Tea Leaves</td>
+            <td class="price">$9.99</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Honey"
+                alt="Honey"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF003</td>
+            <td>Pure Tanzanian Honey</td>
+            <td class="price">$12.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Spices"
+                alt="Spices"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF004</td>
+            <td>Zanzibar Spice Mix</td>
+            <td class="price">$8.25</td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Basket"
+                alt="Basket"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF005</td>
+            <td>Handwoven Rwandan Basket</td>
+            <td class="price">$24.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Art"
+                alt="Art"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF006</td>
+            <td>Tinga Tinga Painting</td>
+            <td class="price">$45.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Beads"
+                alt="Beads"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF007</td>
+            <td>Maasai Beaded Necklace</td>
+            <td class="price">$18.75</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Fabric"
+                alt="Fabric"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF008</td>
+            <td>Ugandan Kitenge Fabric</td>
+            <td class="price">$11.99</td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Sandals"
+                alt="Sandals"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF009</td>
+            <td>Leather Sandals</td>
+            <td class="price">$29.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Drum"
+                alt="Drum"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF010</td>
+            <td>Traditional Burundi Drum</td>
+            <td class="price">$65.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Statue"
+                alt="Statue"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF011</td>
+            <td>Wooden Statue</td>
+            <td class="price">$32.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Coffee+Set"
+                alt="Coffee Set"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF012</td>
+            <td>Ethiopian Coffee Ceremony Set</td>
+            <td class="price">$38.00</td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Shea+Butter"
+                alt="Shea Butter"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF013</td>
+            <td>Organic Shea Butter</td>
+            <td class="price">$14.25</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Vanilla"
+                alt="Vanilla"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF014</td>
+            <td>Madagascar Vanilla Beans</td>
+            <td class="price">$24.99</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Coffee+Mug"
+                alt="Coffee Mug"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF015</td>
+            <td>African Print Coffee Mug</td>
+            <td class="price">$12.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Earrings"
+                alt="Earrings"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF016</td>
+            <td>Bone Earrings</td>
+            <td class="price">$15.00</td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Soapstone"
+                alt="Soapstone"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF017</td>
+            <td>Kenyan Soapstone Carving</td>
+            <td class="price">$27.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Bowls"
+                alt="Bowls"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF018</td>
+            <td>Hand-carved Wooden Bowls</td>
+            <td class="price">$34.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Rug"
+                alt="Rug"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF019</td>
+            <td>Wool Rug from Ethiopia</td>
+            <td class="price">$89.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Basket+2"
+                alt="Basket"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF020</td>
+            <td>Decorative Basket</td>
+            <td class="price">$19.99</td>
+          </tr>
+
+          <!-- Row 6 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Mask"
+                alt="Mask"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF021</td>
+            <td>Traditional African Mask</td>
+            <td class="price">$42.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Blanket"
+                alt="Blanket"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF022</td>
+            <td>Wool Blanket</td>
+            <td class="price">$55.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Pottery"
+                alt="Pottery"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF023</td>
+            <td>Handmade Pottery</td>
+            <td class="price">$31.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Jewelry"
+                alt="Jewelry Set"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF024</td>
+            <td>Beaded Jewelry Set</td>
+            <td class="price">$29.99</td>
+          </tr>
+
+          <!-- Row 7 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Candle"
+                alt="Candle"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF025</td>
+            <td>Beeswax Candles</td>
+            <td class="price">$10.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Basket+3"
+                alt="Basket"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF026</td>
+            <td>Fruit Basket</td>
+            <td class="price">$24.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Painting"
+                alt="Painting"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF027</td>
+            <td>African Landscape Painting</td>
+            <td class="price">$75.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Necklace"
+                alt="Necklace"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF028</td>
+            <td>Silver Necklace</td>
+            <td class="price">$48.00</td>
+          </tr>
+
+          <!-- Row 8 -->
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Bag"
+                alt="Bag"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF029</td>
+            <td>Leather Handbag</td>
+            <td class="price">$65.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Scarf"
+                alt="Scarf"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF030</td>
+            <td>Silk Scarf</td>
+            <td class="price">$28.50</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Chess"
+                alt="Chess Set"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF031</td>
+            <td>African Chess Set</td>
+            <td class="price">$52.00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://via.placeholder.com/80x80.png?text=Basket+4"
+                alt="Basket"
+                class="product-img"
+              />
+            </td>
+            <td class="product-id">AF032</td>
+            <td>Storage Basket</td>
+            <td class="price">$36.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Customer Registration</h2>
+      <div class="registration-form">
+        <form id="customerForm" action="#" method="post">
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="form-control"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telephone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-control"
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              required
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                />
+                <label for="male">Male</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country of Birth:</label>
+            <select id="country" name="country" class="form-control" required>
+              <option value="">-- Select East African Country --</option>
+              <option value="kenya">Kenya</option>
+              <option value="tanzania">Tanzania</option>
+              <option value="uganda">Uganda</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="burundi">Burundi</option>
+              <option value="south_sudan">South Sudan</option>
+              <option value="ethiopia">Ethiopia</option>
+              <option value="somalia">Somalia</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="eritrea">Eritrea</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label
+              >Product Categories of Interest (Select all that apply):</label
+            >
+            <div class="checkbox-group">
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="food"
+                  name="categories"
+                  value="food"
+                />
+                <label for="food">Food & Beverages</label>
+              </div>
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="clothing"
+                  name="categories"
+                  value="clothing"
+                />
+                <label for="clothing">Clothing & Textiles</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="art" name="categories" value="art" />
+                <label for="art">Art & Crafts</label>
+              </div>
+              <div class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="jewelry"
+                  name="categories"
+                  value="jewelry"
+                />
+                <label for="jewelry">Jewelry & Accessories</label>
+              </div>
+              <div class="checkbox-option"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
